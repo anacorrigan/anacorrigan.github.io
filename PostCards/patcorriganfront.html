@@ -1,0 +1,193 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<style>
+
+body {
+    background: #ffcc00;
+    height: 100%;
+    width: 100%;
+    float:left;
+}   
+
+h1 {
+    color:white;
+    margin-top:50px;
+    font-family: helvetica;
+}
+
+h2 {
+    color:white;
+    margin-top:160px;
+    font-family: helvetica;
+}
+
+div {
+    box-sizing: border-box;
+    margin:20px;
+    width: 100%;
+    height: 100%;
+    float:left;
+}
+
+.row1 {
+  overflow: scroll;
+  top: 10%;
+  height: 10%;
+  white-space: nowrap;
+  margin-left:60vh;
+
+
+}
+
+.row1 a {
+  float: left;
+    color: #cc0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: helvetica;
+
+
+}
+
+.row1 a.active {
+
+    background-color:#91191b;
+    color: white;
+    
+
+}
+
+.row1 a:hover {
+    background-color:#4d59cf;
+    color: #ffcc00;
+    transition: all 0.5s ease;
+}
+
+
+.row2 {
+    width:160vh;
+    height:280px;
+    display: inline-block;
+    margin:0px;
+     margin-left:55vh;
+
+}
+
+.gallery {
+    border:10px;
+    background-color: #91191b;
+    width: 65%;
+    height: 90%;
+    overflow: auto;
+    transition: all 0.5s ease;}
+
+  .gallery a {
+      display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+
+.gallery img:hover {
+    border: 10px solid #4d59cf;
+    transition: all 0.5s ease;
+    
+}
+
+.gallery img {
+    width: auto;
+    height: 200px;
+    margin:0px;
+}
+
+.largeimage {
+    
+    width: auto;
+    height: 500px;
+    background-color: red;
+   position: center;
+    margin-left: 50vh;
+    margin-top: 50px;
+
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="row1">
+   
+
+  <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/homepage.html">Home</a>
+  
+  <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorrigan.html">Backside</a>
+
+   <a class="active" a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorriganfront.html">Frontside</a>
+
+   <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorriganmap.html">  Directions </a>
+
+</div>
+  
+<div class="row2">
+<div class="gallery">
+    <div class="galleryimg">
+  
+        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8614.jpg">
+          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8614.jpg" alt="pat1" width="300" height="200" >
+        </a> 
+
+
+        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8616.jpg">
+          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8616.jpg" alt="pat2" width="300" height="200">
+        </a>
+        
+
+        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8618.jpg">
+          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8618.jpg" alt="pat3" width="300" height="200">
+        </a>
+        
+
+        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8622.jpg">
+          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8622.jpg" alt="pat4" width="300" height="200">
+        </a>
+        
+
+         <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8624.jpg">
+          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8624.jpg" alt="pat5" width="300" height="200">
+        </a> </div></div></div>
+
+  <img class="largeimage">
+  
+
+<script type="text/javascript">
+    
+$(".imagelink").click(function(e){
+
+    e.preventDefault()
+    var imageFile = $(this).attr("href")
+    console.log(imageFile)
+    $(".largeimage").attr("src", imageFile)
+})
+
+
+
+
+</script>
+
+</body>
+</html>

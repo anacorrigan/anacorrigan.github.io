@@ -1,0 +1,123 @@
+
+<html>
+<head>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<style>
+
+body {
+    background: #cf9a2b;
+    height: 100%;
+    width: 100%;
+    float:left;
+}   
+
+h1 {
+    color:white;
+    margin-top:50px;
+}
+
+h2 {
+    color:white;
+    margin-top:160px;
+}
+
+div {
+    box-sizing: border-box;
+    margin:20px;
+    width: 100%;
+    height: 100%;
+    float:left;
+}
+
+.row1 {
+    width:35%;
+    display: inline-block;
+    margin:0px;
+    padding-left: 60px;
+
+}
+
+.gallery {
+    background-color: #91191b;
+    width: 70%;
+    height: 90%;
+    overflow: scroll;}
+
+.gallery img:hover {
+    border: 5px solid #4d59cf;
+    
+}
+
+.gallery img {
+    width: auto;
+    height: 200px;
+    margin:0px;
+}
+
+.largeimage {
+    display: inline-block;
+    width: auto;
+    height: 500px;
+    background-color: red;
+    margin: 0px;
+    margin-top: 50px;
+
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="row1">
+
+    <h1><a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/mbriley.html">Backside</a>/
+    
+    <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/mbrileyfront.html">Frontside</a>/
+
+    <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/homepage.html">Home</a>/ </h1> 
+    <div class="gallery">
+    <div class="galleryimg">
+  
+  <p><a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8643.jpg"> 
+    <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8643.jpg" alt="lowelfoulke" width="300" height="200" >
+  </a> </p>
+
+
+ </div></div></div>
+
+ <h2> Mr. and Mrs. M B. Riley
+   <br>Springville, Pennsylvania
+    <Br>U.S. 18849
+    </Br></h2>
+
+<img class="largeimage">
+ 
+ </div></div></div>
+ 
+  
+  
+
+<script type="text/javascript">
+    
+$(".imagelink").click(function(e){
+
+    e.preventDefault()
+    var imageFile = $(this).attr("href")
+    console.log(imageFile)
+    $(".largeimage").attr("src", imageFile)
+})
+
+
+</script>
+
+</body></html>
+
