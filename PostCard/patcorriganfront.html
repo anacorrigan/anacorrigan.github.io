@@ -13,7 +13,7 @@
 body {
     background: #ffcc00;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     float:left;
 }   
 
@@ -38,12 +38,14 @@ div {
 }
 
 .row1 {
-  overflow: scroll;
+  position: relative;
   top: 10%;
   height: 10%;
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
   white-space: nowrap;
-  margin-left:60vh;
-
+  
 
 }
 
@@ -55,8 +57,6 @@ div {
     text-decoration: none;
     font-size: 25px;
     font-family: helvetica;
-
-
 }
 
 .row1 a.active {
@@ -73,13 +73,12 @@ div {
     transition: all 0.5s ease;
 }
 
-
 .row2 {
-    width:160vh;
+    width:100vw;
     height:280px;
     display: inline-block;
     margin:0px;
-     margin-left:55vh;
+    
 
 }
 
@@ -89,6 +88,8 @@ div {
     width: 65%;
     height: 90%;
     overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
     transition: all 0.5s ease;}
 
   .gallery a {
@@ -101,7 +102,7 @@ div {
 
 
 .gallery img:hover {
-    border: 10px solid #4d59cf;
+    border: 5px solid #4d59cf;
     transition: all 0.5s ease;
     
 }
@@ -118,7 +119,7 @@ div {
     height: 500px;
     background-color: red;
    position: center;
-    margin-left: 50vh;
+    margin-left: 57vh;
     margin-top: 50px;
 
 }
@@ -133,42 +134,42 @@ div {
 <div class="row1">
    
 
-  <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/homepage.html">Home</a>
+  <a href="homepage.html">Home</a>
   
-  <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorrigan.html">Backside</a>
+  <a href="patcorrigan.html">Backside</a>
 
-   <a class="active" a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorriganfront.html">Frontside</a>
+   <a class="active" a href="patcorriganfront.html">Frontside</a>
 
-   <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/patcorriganmap.html">  Directions </a>
+   <a href="patcorriganmap.html">  Directions </a>
 
 </div>
   
 <div class="row2">
 <div class="gallery">
-    <div class="galleryimg">
+    <div class="galleryimg" style="width: 1500px;">
   
-        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8614.jpg">
-          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8614.jpg" alt="pat1" width="300" height="200" >
+        <a class="imagelink" target="_blank" href="postcards/patgreece2.jpg">
+          <img src="postcards/patgreece2.jpg" alt="pat1" width="300" height="200" >
         </a> 
 
 
-        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8616.jpg">
-          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8616.jpg" alt="pat2" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patlondon2.jpg">
+          <img src="postcards/patlondon2.jpg" alt="pat2" width="300" height="200">
         </a>
         
 
-        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8618.jpg">
-          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8618.jpg" alt="pat3" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patlyon2.jpg">
+          <img src="postcards/patlyon2.jpg" alt="pat3" width="300" height="200">
         </a>
         
 
-        <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8622.jpg">
-          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8622.jpg" alt="pat4" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patosaka2.jpg">
+          <img src="postcards/patosaka2.jpg" alt="pat4" width="300" height="200">
         </a>
         
 
-         <a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8624.jpg">
-          <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8624.jpg" alt="pat5" width="300" height="200">
+         <a class="imagelink" target="_blank" href="postcards/patlido2.jpg">
+          <img src="postcards/patlido2.jpg" alt="pat5" width="300" height="200">
         </a> </div></div></div>
 
   <img class="largeimage">
@@ -176,15 +177,13 @@ div {
 
 <script type="text/javascript">
     
-$(".imagelink").click(function(e){
+  $(".imagelink").click(function(e){
 
-    e.preventDefault()
-    var imageFile = $(this).attr("href")
-    console.log(imageFile)
-    $(".largeimage").attr("src", imageFile)
-})
-
-
+      e.preventDefault()
+      var imageFile = $(this).attr("href")
+      console.log(imageFile)
+      $(".largeimage").attr("src", imageFile)
+  })
 
 
 </script>

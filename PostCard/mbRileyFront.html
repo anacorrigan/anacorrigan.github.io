@@ -1,6 +1,8 @@
 
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -9,7 +11,7 @@
 <style>
 
 body {
-    background: #cf9a2b;
+    background: #ffcc00;
     height: 100%;
     width: 100%;
     float:left;
@@ -18,11 +20,13 @@ body {
 h1 {
     color:white;
     margin-top:50px;
+    font-family: helvetica;
 }
 
 h2 {
     color:white;
     margin-top:160px;
+    font-family: helvetica;
 }
 
 div {
@@ -34,21 +38,67 @@ div {
 }
 
 .row1 {
-    width:35%;
+  overflow: scroll;
+  top: 10%;
+  height: 10%;
+  white-space: nowrap;
+  margin-left:55vh;
+
+}
+
+.row1 a {
+  float: left;
+    color: #cc0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: helvetica;
+}
+
+.row1 a.active {
+
+    background-color:#91191b;
+    color: white;
+    
+
+}
+
+.row1 a:hover {
+    background-color:#4d59cf;
+    color: #ffcc00;
+    transition: all 0.5s ease;
+}
+
+.row2 {
+    width:150vh;
+    height:280px;
     display: inline-block;
     margin:0px;
-    padding-left: 60px;
+    padding-left:55vh;
 
 }
 
 .gallery {
+    border:10px;
     background-color: #91191b;
-    width: 70%;
+    width: 65%;
     height: 90%;
-    overflow: scroll;}
+    overflow: auto;
+    transition: all 0.5s ease;}
+
+  .gallery a {
+      display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
 
 .gallery img:hover {
     border: 5px solid #4d59cf;
+    transition: all 0.5s ease;
     
 }
 
@@ -59,16 +109,15 @@ div {
 }
 
 .largeimage {
-    display: inline-block;
+    
     width: auto;
     height: 500px;
     background-color: red;
-    margin: 0px;
+   position: center;
+    margin-left: 57vh;
     margin-top: 50px;
 
 }
-
-
 
 
 </style>
@@ -78,32 +127,47 @@ div {
 
 
 <div class="row1">
+   
 
-    <h1><a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/mbriley.html">Backside</a>/
-    
-    <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/mbrileyfront.html">Frontside</a>/
+  <a href="homepage.html">Home</a>
+  
+  <a href="mbriley.html">Backside</a>
 
-    <a href="file:///Users/anacorrigan/Parsons/Third%20Year/Core%20Studio%20Interaction/PostCards/homepage.html">Home</a>/ </h1> 
-    <div class="gallery">
+   <a class="active" a href="mbrileyfront.html">Frontside</a>
+
+   <a href="patcorriganmap.html">  Directions </a>
+
+</div>
+  
+<div class="row2">
+<div class="gallery">
     <div class="galleryimg">
   
-  <p><a class="imagelink" target="_blank" href="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8640.jpg"> 
-    <img src="file:///Users/anacorrigan/Desktop/post%20cards/IMG_8640.jpg" alt="lowelfoulke" width="300" height="200" >
-  </a> </p>
+        <a class="imagelink" target="_blank" href="postcards/IMG_8614.jpg">
+          <img src="postcards/IMG_8614.jpg" alt="pat1" width="300" height="200" >
+        </a> 
 
 
- </div></div></div>
+        <a class="imagelink" target="_blank" href="postcards/IMG_8616.jpg">
+          <img src="postcards/IMG_8616.jpg" alt="pat2" width="300" height="200">
+        </a>
+        
 
- <h2> Mr. and Mrs. M B. Riley
-   <br>Springville, Pennsylvania
-    <Br>U.S. 18849
-    </Br></h2>
+        <a class="imagelink" target="_blank" href="postcards/IMG_8618.jpg">
+          <img src="postcards/IMG_8618.jpg" alt="pat3" width="300" height="200">
+        </a>
+        
 
-<img class="largeimage">
- 
- </div></div></div>
- 
-  
+        <a class="imagelink" target="_blank" href="postcards/IMG_8622.jpg">
+          <img src="postcards/IMG_8622.jpg" alt="pat4" width="300" height="200">
+        </a>
+        
+
+         <a class="imagelink" target="_blank" href="postcards/IMG_8624.jpg">
+          <img src="postcards/IMG_8624.jpg" alt="pat5" width="300" height="200">
+        </a> </div></div></div>
+
+  <img class="largeimage">
   
 
 <script type="text/javascript">
@@ -117,7 +181,9 @@ $(".imagelink").click(function(e){
 })
 
 
+
+
 </script>
 
-</body></html>
-
+</body>
+</html>
