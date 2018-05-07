@@ -4,16 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <style>
+
+
+.gmnoprint{
+
+  /*display: none;*/
+}
 
 body {
     background: #ffcc00;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     float:left;
 }   
 
@@ -30,19 +34,25 @@ h2 {
 }
 
 div {
-    box-sizing: border-box;
-    margin:20px;
-    width: 100%;
-    height: 100%;
-    float:left;
+
+}
+
+#map{
+  width: 100vw;
+  height: 80vh;
 }
 
 .row1 {
-  overflow: scroll;
-  top: 10%;
+ 
+  position: relative;
+  display: block;
   height: 10%;
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 38vw;
   white-space: nowrap;
-  margin-left:55vh;
+  float: none;
 
 }
 
@@ -71,21 +81,29 @@ div {
 }
 
 .row2 {
-    width:150vh;
+    width:35vw;
     height:280px;
-    display: inline-block;
-    margin:0px;
-    padding-left:55vh;
+    position: relative;
+    display: block;
+    margin:0 auto;
+    float: none;
+    */
 
 }
 
 .gallery {
+    position: relative;
+    display: block;
+    margin:0 auto;
     border:10px;
     background-color: #91191b;
-    width: 65%;
-    height: 90%;
+    width: 60%;
+    height: 83%;
     overflow: auto;
-    transition: all 0.5s ease;}
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: all 0.5s ease;
+    float: none;}
 
   .gallery a {
       display: inline-block;
@@ -110,15 +128,16 @@ div {
 
 .largeimage {
     
-    width: auto;
+    width: 100vw;
+    max-width: 100%;
+    object-fit: contain;
     height: 500px;
-    background-color: red;
-   position: center;
-    margin-left: 57vh;
+    
+   position: relative;
+    margin: 0 auto;
     margin-top: 50px;
 
 }
-
 
 </style>
 </head>
@@ -131,44 +150,134 @@ div {
 
   <a href="homepage.html">Home</a>
   
-  <a class="active" href="archie.html">Backside</a>
+   <a class="active" a href="archienet.html">Backside</a>
 
-  <a href="archiefront.html">Frontside</a>
+   <a href="archiefront.html">Frontside</a>
 
-  <a href="archiemap.html">  Directions </a>
 
 </div>
   
 <div class="row2">
 <div class="gallery">
-    <div class="galleryimg">
+    <div class="galleryimg" style="width: 1500px;">
   
-        <a class="imagelink" target="_blank" href="postcards/archienet.jpg">
-          <img src="postcards/archienet.jpg" alt="pat1" width="300"     height="200" >
+        <a class="imagelink" target="_blank" href="postcards/archienet.jpg" data-lat="22" data-long="44">
+          <img src="postcards/archienet.jpg" alt="pat1" width="300" height="200" >
         </a> 
-        
-        
-      
-  </a>
 
-</div></div></div>
+ </div></div></div>
 
   <img class="largeimage">
-  
+  <div id="map"></div>
 
 <script type="text/javascript">
+   
+      var startLat = -25.363;
+      var startLong = 131.044;
+
+      var endLat = 39.79;
+      var endLong = -86.14;
+
+
+    var uluru = {lat: startLat, lng: startLong};
+    var indianapolis = {lat: endLat, lng: endLong};
+
+
+
+      function initMap() {
+        
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: indianapolis,
+          styles: [
+            {
+              featureType: 'road',
+              stylers: [{color: '#4d59cf'}]
+            },
+            {
+              featureType: 'water',
+              stylers: [{color: '#ffcc00'}]
+            },
+            {
+              featureType: 'landscape.natural',
+              stylers: [{color: '#91191b'}]
+            }
+          ]
+        });
+
+
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          map: map
+        });
+
+        // the line
+        var line = new google.maps.Polyline({
+          path: [
+              new google.maps.LatLng(startLat, startLong), 
+              new google.maps.LatLng(endLat, endLong)
+          ],
+          strokeColor: "#4d59cf",
+          strokeOpacity: 1.0,
+          strokeWeight: 10,
+          map: map
+      });
+
+        // the markers
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: indianapolis,
+          map: map
+        });
+
+         $(".imagelink").click(function(e){
+            e.preventDefault()
+            var imageFile = $(this).attr("href")
+            console.log(imageFile)
+            $(".largeimage").attr("src", imageFile)
+
+            var newLat = $(this).data("lat")
+            var newLong = $(this).data("long")
+            console.log(newLat, newLong)
+
+
+            var path = line.getPath()
+
+
+            path.push(new google.maps.LatLng(newLat, newLong));
+            // update the polyline with the updated path
+            line.setPath(path);
+
+
+        })
+
+
+
+        // color:
+        $('#map').on('shown', function () {
+          console.log("shift")
+        google.maps.event.trigger(map, 'resize');
+        map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
+      })
+
+      }
+
     
-$(".imagelink").click(function(e){
-
-    e.preventDefault()
-    var imageFile = $(this).attr("href")
-    console.log(imageFile)
-    $(".largeimage").attr("src", imageFile)
-})
 
 
+    </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIZdEtgTKuxB2o7dljpI84HF_IeSVk-Ow&callback=initMap">
+
+  // original : src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIZdEtgTKuxB2o7dljpI84HF_IeSVk-Ow&callback=initMap">
 
 
+  //https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=YOUR_API_KEY
 </script>
 
 </body>
