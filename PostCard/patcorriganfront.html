@@ -15,7 +15,7 @@
 }
 
 body {
-    background: #ffcc00;
+    background: white;
     height: 100%;
     width: 100vw;
     float:left;
@@ -57,26 +57,27 @@ div {
 }
 
 .row1 a {
-  float: left;
-    color: #cc0000;
+    float: left;
+    color: orange;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 16px;
     text-decoration: none;
     font-size: 25px;
     font-family: helvetica;
 }
 
 .row1 a.active {
-
-    background-color:#91191b;
-    color: white;
+    text-decoration: underline;
+    background-color:none;
+    border-radius: 10%;
+    color: #8AC3FF;
     
 
 }
 
 .row1 a:hover {
-    background-color:#4d59cf;
-    color: #ffcc00;
+    background-color:none;
+    color: #8AC3FF;
     transition: all 0.5s ease;
 }
 
@@ -96,7 +97,7 @@ div {
     display: block;
     margin:0 auto;
     border:10px;
-    background-color: #91191b;
+    background-color: white;
     width: 65%;
     height: 90%;
     overflow: auto;
@@ -115,7 +116,7 @@ div {
 
 
 .gallery img:hover {
-    border: 5px solid #4d59cf;
+    border: 5px solid #8AC3FF;
     transition: all 0.5s ease;
     
 }
@@ -137,7 +138,6 @@ div {
     margin: 0 auto;
     margin-top: 50px;
 
-}
 
 </style>
 </head>
@@ -212,15 +212,15 @@ div {
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#4d59cf'}]
+              stylers: [{color: '#B4DBFF'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#ffcc00'}]
+              stylers: [{color: '#FFFFFF'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#91191b'}]
+              stylers: [{color: '#8AC3FF'}]
             }
           ]
         });

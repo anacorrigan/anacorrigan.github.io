@@ -1,10 +1,14 @@
 
 <html>
 <head>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <style>
 
@@ -15,7 +19,7 @@
 }
 
 body {
-    background: #ffcc00;
+    background: white;
     height: 100%;
     width: 100vw;
     float:left;
@@ -24,13 +28,13 @@ body {
 h1 {
     color:white;
     margin-top:50px;
-    font-family: helvetica;
+    font-family: 'Roboto Slab';
 }
 
 h2 {
     color:white;
     margin-top:160px;
-    font-family: helvetica;
+    font-family: 'Roboto Slab';
 }
 
 div {
@@ -58,25 +62,25 @@ div {
 
 .row1 a {
   float: left;
-    color: #cc0000;
+    color: orange;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 25px;
-    font-family: helvetica;
+    font-family: 'Roboto Slab';
 }
 
 .row1 a.active {
 
-    background-color:#91191b;
+    background-color:orange;
     color: white;
     
 
 }
 
 .row1 a:hover {
-    background-color:#4d59cf;
-    color: #ffcc00;
+    background-color:none;
+    color: #8AC3FF;
     transition: all 0.5s ease;
 }
 
@@ -96,7 +100,7 @@ div {
     display: block;
     margin:0 auto;
     border:10px;
-    background-color: #91191b;
+    background-color: white;
     width: 65%;
     height: 90%;
     overflow: auto;
@@ -115,7 +119,7 @@ div {
 
 
 .gallery img:hover {
-    border: 5px solid #4d59cf;
+    border: 5px solid #8AC3FF;
     transition: all 0.5s ease;
     
 }
@@ -124,6 +128,33 @@ div {
     width: auto;
     height: 200px;
     margin:0px;
+}
+
+
+@media all and (max-width: 768px){
+
+  .row1{
+    margin-left: 0px;
+    margin: 0 auto;
+    width: 100vw;
+    margin-top:30px;
+  }
+
+  .row1 > a{
+    font-size: 15px;
+    position: relative;
+    float: none;
+
+  }
+
+  .row2{
+    width: 100vw;
+  }
+
+  .gallery{
+    width: 100%;
+  }
+
 }
 
 .largeimage {

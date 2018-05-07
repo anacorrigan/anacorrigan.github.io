@@ -15,7 +15,7 @@
 }
 
 body {
-    background: #ffcc00;
+    background:white;
     height: 100%;
     width: 100vw;
     float:left;
@@ -172,10 +172,10 @@ div {
 
 <script type="text/javascript">
    
-      var startLat = -25.363;
-      var startLong = 131.044;
+      var startLat = 41.8359378;
+      var startLong = -76.8194533;
 
-      var endLat = 39.79;
+      var endLat = 35.94944;
       var endLong = -86.14;
 
 
@@ -262,7 +262,7 @@ div {
         $('#map').on('shown', function () {
           console.log("shift")
         google.maps.event.trigger(map, 'resize');
-        map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
+        map.setCenter(new google.maps.LatLng(35.94944, -85.1050383));
       })
 
       }
