@@ -71,7 +71,7 @@ div {
 
 
 .row2 {
-    width:35vw;
+    width:38vw;
     height:280px;
     position: relative;
     display: block;
@@ -123,7 +123,7 @@ div {
 .gallery {
     position: relative;
     display: block;
-    margin-left:30px;
+    margin-left:80px;
     border:10px;
     background-color:none;
     width: 60%;
@@ -154,12 +154,13 @@ div {
 
 .largeimage {
     
-    width: 100vw;
+    width: 60vw;
     max-width:100%;
     object-fit: contain;
     height:auto;
     position: relative;
-    margin-top: 0px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 50px;
 
 }
