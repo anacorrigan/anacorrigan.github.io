@@ -50,6 +50,7 @@ div {
     text-decoration: none;
     font-size: 25px;
     font-family: 'Roboto';
+
 }
 
 .row1 a.active {
@@ -153,14 +154,13 @@ div {
 
 .largeimage {
     
-    width: 70vw;
-    max-width: 70%;
+    width: 100vw;
+    max-width:100%;
     object-fit: contain;
-    height: 70%;
-    
-   position: relative;
-    margin: 0 auto;
+    height:auto;
+    position: relative;
     margin-top: 0px;
+    margin-bottom: 50px;
 
 }
 
@@ -189,7 +189,6 @@ div {
     width: 100%;
   }
 
-}
 
 .largeimage {
     
