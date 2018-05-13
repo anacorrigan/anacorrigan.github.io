@@ -1,6 +1,8 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script
@@ -14,7 +16,7 @@
   /*display: none;*/
 }
 
-body {
+/*body {
     background: #ffcc00;
     height: 100%;
     width: 100vw;
@@ -86,7 +88,7 @@ div {
     display: block;
     margin:0 auto;
     float: none;
-    */
+    
 
 }
 
@@ -136,7 +138,7 @@ div {
     margin: 0 auto;
     margin-top: 50px;
 
-}
+}*/*/
 
 </style>
 </head>
@@ -160,8 +162,8 @@ div {
 <div class="gallery">
     <div class="galleryimg" style="width: 1500px;">
   
-        <a class="imagelink" target="_blank" href="postcards/sarah.jpg" data-lat="22" data-long="44">
-          <img src="postcards/sarah.jpg" alt="pat1" width="300" height="200" >
+        <a class="imagelink" target="_blank" href="postcards/sarah.jpg">
+          <img src="postcards/sarah.jpg" alt="pat1" width="300" height="200">
         </a> 
 
  </div></div></div>
@@ -171,11 +173,11 @@ div {
 
 <script type="text/javascript">
    
-      var startLat = -25.363;
-      var startLong = 131.044;
+      var startLat = 40.7141484;
+      var startLong = -73.963915;
 
-      var endLat = 39.79;
-      var endLong = -86.14;
+      var endLat = 50.0597717;
+      var endLong = 14.1847568;
 
 
     var uluru = {lat: startLat, lng: startLong};
@@ -193,16 +195,17 @@ div {
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#4d59cf'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#ffcc00'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#91191b'}]
+              stylers: [{color: '#FD670B'}]
             }
+
           ]
         });
 
@@ -217,9 +220,9 @@ div {
               new google.maps.LatLng(startLat, startLong), 
               new google.maps.LatLng(endLat, endLong)
           ],
-          strokeColor: "#4d59cf",
+          strokeColor: "#FFFFFF",
           strokeOpacity: 1.0,
-          strokeWeight: 10,
+          strokeWeight: 5,
           map: map
       });
 

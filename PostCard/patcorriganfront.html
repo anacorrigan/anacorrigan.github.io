@@ -1,6 +1,8 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script
@@ -14,7 +16,7 @@
   /*display: none;*/
 }
 
-body {
+/*body {
     background: white;
     height: 100%;
     width: 100vw;
@@ -138,7 +140,7 @@ div {
     margin: 0 auto;
     margin-top: 50px;
 
-
+*/
 </style>
 </head>
 <body>
@@ -158,8 +160,8 @@ div {
 </div>
   
 <div class="row2">
-<div class="gallery">
-    <div class="galleryimg" style="width: 1500px;">
+<div class="gallery1">
+    <div class="gallery1img" style="width: 1500px;">
   
         <a class="imagelink" target="_blank" href="postcards/patgreece2.jpg" data-lat="22" data-long="44">
           <img src="postcards/patgreece2.jpg" alt="pat1" width="300" height="200" >
@@ -212,16 +214,17 @@ div {
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#B4DBFF'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#FFFFFF'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#8AC3FF'}]
+              stylers: [{color: '#FD670B'}]
             }
+
           ]
         });
 
@@ -236,7 +239,7 @@ div {
               new google.maps.LatLng(startLat, startLong), 
               new google.maps.LatLng(endLat, endLong)
           ],
-          strokeColor: "#4d59cf",
+          strokeColor: "#FFFFFF",
           strokeOpacity: 1.0,
           strokeWeight: 10,
           map: map

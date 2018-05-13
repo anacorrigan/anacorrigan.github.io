@@ -1,0 +1,206 @@
+
+
+body {
+    background: #C3D96F;
+    height: 100%;
+    width: 100vw;
+    float:left;
+}   
+
+h1 {
+    color:white;
+    margin-top:50px;
+    font-family: 'Roboto ';
+}
+
+h2 {
+    color:white;
+    margin-top:160px;
+    font-family: 'Roboto ';
+}
+
+div {
+
+}
+
+#map{
+  width: 100vw;
+  height: 80vh;
+}
+
+.row1 {
+ 
+  position: relative;
+  display: block;
+  height: 10%;
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 35vw;
+  white-space: nowrap;
+  float: none;
+
+}
+
+.row1 a {
+  float: left;
+    color: #FD670B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Roboto';
+}
+
+.row1 a.active {
+
+    background-color:#FD670B;
+    color: white;
+    
+
+}
+
+.row1 a:hover {
+    background-color:none;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+
+
+
+.row2 {
+    width:35vw;
+    height:280px;
+    position: relative;
+    display: block;
+    margin:0 auto;
+    float: none;
+    */
+
+}
+
+.gallery1 {
+  position: relative;
+    display: block;
+    margin:0 auto;
+    border:10px;
+    background-color:none;
+    width: 60%;
+    height: 83%;
+    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: all 0.5s ease;
+    float: none;}
+
+
+}
+
+.gallery1 a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+  }
+
+
+.gallery1 img:hover {
+    border: 5px solid white;
+    transition: all 0.5s ease;
+    
+}
+
+.gallery1 img {
+    width: auto;
+    height: 200px;
+    margin:0px;
+}
+
+
+.gallery {
+    position: relative;
+    display: block;
+    margin-left:30px;
+    border:10px;
+    background-color:none;
+    width: 60%;
+    height: 83%;
+    transition: all 0.5s ease;
+    float: none;}
+
+  .gallery a {
+      display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+
+.gallery img:hover {
+    border: 5px solid white;
+    transition: all 0.5s ease;
+    
+}
+
+.gallery img {
+    width: auto;
+    height: 200px;
+    margin:0px;
+}
+
+.largeimage {
+    
+    width: 70vw;
+    max-width: 70%;
+    object-fit: contain;
+    height: 70%;
+    
+   position: relative;
+    margin: 0 auto;
+    margin-top: 0px;
+
+}
+
+
+@media all and (max-width: 768px){
+
+  .row1{
+    margin-left: 0px;
+    margin: 0 auto;
+    width: 100vw;
+    margin-top:30px;
+  }
+
+  .row1  a{
+    font-size: 15px;
+    position: relative;
+    float: none;
+
+  }
+
+  .row2{
+    width: 100vw;
+  }
+
+  .gallery{
+    width: 100%;
+  }
+
+}
+
+.largeimage {
+    
+    width: 100vw;
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+    
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+}

@@ -1,6 +1,8 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script
@@ -14,129 +16,6 @@
   /*display: none;*/
 }
 
-body {
-    background: #ffcc00;
-    height: 100%;
-    width: 100vw;
-    float:left;
-}   
-
-h1 {
-    color:white;
-    margin-top:50px;
-    font-family: helvetica;
-}
-
-h2 {
-    color:white;
-    margin-top:160px;
-    font-family: helvetica;
-}
-
-div {
-
-}
-
-#map{
-  width: 100vw;
-  height: 80vh;
-}
-
-.row1 {
-  position: relative;
-  display: block;
-  height: 10%;
-  width: 60vw;
-  text-align: center;
-  margin: 0 auto;
-  margin-left: 38vw;
-  white-space: nowrap;
-  float: none;
-
-}
-
-.row1 a {
-  float: left;
-    color: #cc0000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: helvetica;
-}
-
-.row1 a.active {
-
-    background-color:#91191b;
-    color: white;
-    
-
-}
-
-.row1 a:hover {
-    background-color:#4d59cf;
-    color: #ffcc00;
-    transition: all 0.5s ease;
-}
-
-.row2 {
-    width:35vw;
-    height:280px;
-    position: relative;
-    display: block;
-    margin:0 auto;
-    float: none;
-    */
-
-}
-
-.gallery {
-    position: relative;
-    display: block;
-    margin:0 auto;
-    border:10px;
-    background-color: #91191b;
-    width: 60%;
-    height: 83%;
-    overflow: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    transition: all 0.5s ease;
-    float: none;}
-
-  .gallery a {
-      display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-
-
-.gallery img:hover {
-    border: 5px solid #4d59cf;
-    transition: all 0.5s ease;
-    
-}
-
-.gallery img {
-    width: auto;
-    height: 200px;
-    margin:0px;
-}
-
-.largeimage {
-    
-    width: 100vw;
-    max-width: 100%;
-    object-fit: contain;
-    height: 500px;
-    
-   position: relative;
-    margin: 0 auto;
-    margin-top: 50px;
-
-}
 
 </style>
 </head>
@@ -160,7 +39,7 @@ div {
 <div class="gallery">
     <div class="galleryimg" style="width: 1500px;">
   
-        <a class="imagelink" target="_blank" href="postcards/mosche2.jpg" data-lat="22" data-long="44">
+        <a class="imagelink" target="_blank" href="postcards/mosche2.jpg" >
           <img src="postcards/mosche2.jpg" alt="pat1" width="300" height="200" >
         </a> 
 
@@ -171,11 +50,11 @@ div {
 
 <script type="text/javascript">
    
-      var startLat = -25.363;
-      var startLong = 131.044;
+      var startLat = 40.7141484;
+      var startLong = -73.963915;
 
-      var endLat = 39.79;
-      var endLong = -86.14;
+      var endLat = 50.0597717;
+      var endLong = 14.1847568;
 
 
     var uluru = {lat: startLat, lng: startLong};
@@ -193,16 +72,17 @@ div {
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#4d59cf'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#ffcc00'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#91191b'}]
+              stylers: [{color: '#FD670B'}]
             }
+
           ]
         });
 
@@ -217,9 +97,9 @@ div {
               new google.maps.LatLng(startLat, startLong), 
               new google.maps.LatLng(endLat, endLong)
           ],
-          strokeColor: "#4d59cf",
+          strokeColor: "#FFFFFF",
           strokeOpacity: 1.0,
-          strokeWeight: 10,
+          strokeWeight: 5,
           map: map
       });
 
@@ -254,18 +134,6 @@ div {
 
 
         })
-
-
-
-        // color:
-        $('#map').on('shown', function () {
-          console.log("shift")
-        google.maps.event.trigger(map, 'resize');
-        map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
-      })
-
-      }
-
     
 
 

@@ -1,6 +1,7 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
 
@@ -18,7 +19,7 @@
   /*display: none;*/
 }
 
-body {
+/*body {
     background: white;
     height: 100%;
     width: 100vw;
@@ -34,7 +35,7 @@ h1 {
 h2 {
     color:white;
     margin-top:160px;
-    font-family: 'Roboto Slab';
+   font-family: 'Roboto ';
 }
 
 div {
@@ -53,7 +54,7 @@ div {
   width: 60vw;
   text-align: center;
   margin: 0 auto;
-  margin-left: 35vw;
+  margin-left: 38vw;
   white-space: nowrap;
   float: none;
   
@@ -85,7 +86,7 @@ div {
 }
 
 .row2 {
-    width:65vw;
+    width:35vw;
     height:280px;
     position: relative;
     display: block;
@@ -168,7 +169,7 @@ div {
     margin: 0 auto;
     margin-top: 50px;
 
-}
+}*/
 
 </style>
 </head>
@@ -189,8 +190,8 @@ div {
 </div>
   
 <div class="row2">
-<div class="gallery">
-    <div class="galleryimg" style="width: 1500px;">
+<div class="gallery1">
+    <div class="gallery1img" style="width: 1500px;">
   
         <a class="imagelink" target="_blank" href="postcards/patgreece.jpg" data-lat="22" data-long="44">
           <img src="postcards/patgreece.jpg" alt="pat1" width="300" height="200" >
@@ -220,39 +221,37 @@ div {
   <div id="map"></div>
 
 <script type="text/javascript">
-   
+      // this changes based on postcard
       var startLat = -25.363;
       var startLong = 131.044;
+      var startPoint = {lat: startLat, lng: startLong};
 
+      // this is the destination point (so it stays the same)
       var endLat = 39.79;
       var endLong = -86.14;
-
-
-    var uluru = {lat: startLat, lng: startLong};
-    var indianapolis = {lat: endLat, lng: endLong};
+      var endPoint = {lat: endLat, lng: endLong};
 
 
 
       function initMap() {
         
-
-
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: indianapolis,
+          center: endPoint,
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#4d59cf'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#ffcc00'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#91191b'}]
+              stylers: [{color: '#FD670B'}]
             }
+
           ]
         });
 
@@ -269,21 +268,23 @@ div {
           ],
           strokeColor: "#4d59cf",
           strokeOpacity: 1.0,
-          strokeWeight: 10,
+          strokeWeight: 5,
           map: map
       });
 
         // the markers
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: startPoint,
           map: map
         });
 
         var marker2 = new google.maps.Marker({
-          position: indianapolis,
+          position: endPoint,
           map: map
         });
 
+
+        // when you click on a new image:
          $(".imagelink").click(function(e){
             e.preventDefault()
             var imageFile = $(this).attr("href")
@@ -292,16 +293,29 @@ div {
 
             var newLat = $(this).data("lat")
             var newLong = $(this).data("long")
-            console.log(newLat, newLong)
+            console.log("new lat and long: ", newLat, newLong)
 
+            // delete old path
+            line.setMap(null);
+            // create new path:
+            line = new google.maps.Polyline({
+                path: [
+                    new google.maps.LatLng(newLat, newLong), 
+                    new google.maps.LatLng(endLat, endLong)
+                ],
+                strokeColor: "#FFFFFF",
+                strokeOpacity: 1.0,
+                strokeWeight: 5,
+                map: map
+            });
 
-            var path = line.getPath()
-
-
-            path.push(new google.maps.LatLng(newLat, newLong));
-            // update the polyline with the updated path
-            line.setPath(path);
-
+            //delete old marker
+            marker.setMap(null)
+            // create new marker
+            marker = new google.maps.Marker({
+              position: {lat: newLat, lng: newLong},
+              map: map
+            });
 
         })
 
