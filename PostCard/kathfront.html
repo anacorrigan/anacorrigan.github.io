@@ -18,6 +18,8 @@
 
 
 
+}*/*/
+
 </style>
 </head>
 <body>
@@ -31,7 +33,7 @@
   
    <a href="kath.html">Backside</a>
 
-   <a class="active" href="kathfront.html">Frontside</a>
+   <a class="active"  href="kathfront.html">Frontside</a>
 
 
 </div>
@@ -51,12 +53,11 @@
 
 <script type="text/javascript">
    
-      var startLat = -33.2466163;
-      var startLong = 9.1668641;
+      var startLat = 32.8114746;
+      var startLong =-117.2611045;
 
-      var endLat = 32.8114746;
-     var endLong = -117.26110;
-
+      var endLat = -31.9395139;
+     var endLong = 22.6303022;
 
     var uluru = {lat: startLat, lng: startLong};
     var indianapolis = {lat: endLat, lng: endLong};
@@ -135,6 +136,18 @@
 
 
         })
+
+
+
+        // color:
+        $('#map').on('shown', function () {
+          console.log("shift")
+        google.maps.event.trigger(map, 'resize');
+        map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
+      })
+
+      }
+
     
 
 

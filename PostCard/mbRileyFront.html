@@ -58,11 +58,11 @@
 
 <script type="text/javascript">
    
-      var startLat = 41.6976065;
-      var startLong = -75.9352499;
+       var startLat = 39.2034441;
+      var startLong = -120.2375249;
 
-      var endLat = 39.2036202;
-      var endLong = -120.2240489;
+      var endLat = 43.0723035;
+      var endLong =-73.1353504;
 
 
     var uluru = {lat: startLat, lng: startLong};
@@ -80,16 +80,17 @@
           styles: [
             {
               featureType: 'road',
-              stylers: [{color: '#4d59cf'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'water',
-              stylers: [{color: '#ffcc00'}]
+              stylers: [{color: '#C3D96F'}]
             },
             {
               featureType: 'landscape.natural',
-              stylers: [{color: '#91191b'}]
+              stylers: [{color: '#FD670B'}]
             }
+
           ]
         });
 
@@ -104,11 +105,12 @@
               new google.maps.LatLng(startLat, startLong), 
               new google.maps.LatLng(endLat, endLong)
           ],
-          strokeColor: "#4d59cf",
+          strokeColor: "#FFFFFF",
           strokeOpacity: 1.0,
-          strokeWeight: 10,
+          strokeWeight: 5,
           map: map
       });
+
 
         // the markers
         var marker = new google.maps.Marker({

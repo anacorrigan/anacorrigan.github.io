@@ -163,40 +163,43 @@ div {
 <div class="gallery1">
     <div class="gallery1img" style="width: 1500px;">
   
-        <a class="imagelink" target="_blank" href="postcards/patgreece2.jpg" data-lat="22" data-long="44">
-          <img src="postcards/patgreece2.jpg" alt="pat1" width="300" height="200" >
+         <a class="imagelink" target="_blank" href="postcards/patgreece.jpg" data-lat="38.068958" data-long="19.9904536">
+          <img src="postcards/patgreece.jpg" alt="pat1" width="300" height="200" >
         </a> 
 
 
-        <a class="imagelink" target="_blank" href="postcards/patlondon2.jpg">
-          <img src="postcards/patlondon2.jpg" alt="pat2" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patlondon.jpg" data-lat="51.5287718" data-long="-0.2416814" >
+          <img src="postcards/patlondon.jpg" alt="pat2" width="300" height="200">
         </a>
         
 
-        <a class="imagelink" target="_blank" href="postcards/patlyon2.jpg">
-          <img src="postcards/patlyon2.jpg" alt="pat3" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patlyon.jpg" data-lat="45.7612284" data-long="4.8169922" >
+          <img src="postcards/patlyon.jpg" alt="pat3" width="300" height="200">
         </a>
         
 
-        <a class="imagelink" target="_blank" href="postcards/patosaka2.jpg">
-          <img src="postcards/patosaka2.jpg" alt="pat4" width="300" height="200">
+        <a class="imagelink" target="_blank" href="postcards/patosaka.jpg" data-lat="34.6784656" data-long="135.4601305" >
+          <img src="postcards/patosaka.jpg" alt="pat4" width="300" height="200">
         </a>
         
 
-         <a class="imagelink" target="_blank" href="postcards/patlido2.jpg">
-          <img src="postcards/patlido2.jpg" alt="pat5" width="300" height="200">
+         <a class="imagelink" target="_blank" href="postcards/patlido.jpg" data-lat="44.7426159" data-long="12.2284782" >
+          <img src="postcards/patlido.jpg" alt="pat5" width="300" height="200">
         </a> </div></div></div>
 
   <img class="largeimage">
   <div id="map"></div>
 
 <script type="text/javascript">
-   
+      // this changes based on postcard
       var startLat = -25.363;
       var startLong = 131.044;
+      var startPoint = {lat: startLat, lng: startLong};
 
-      var endLat = 39.79;
-      var endLong = -86.14;
+      // this is the destination point (so it stays the same)
+      var endLat = 41.1160348;
+      var endLong = -73.9464141;
+      var endPoint = {lat: endLat, lng: endLong};
 
 
     var uluru = {lat: startLat, lng: startLong};

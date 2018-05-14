@@ -17,6 +17,9 @@
 }
 
 
+
+}*/*/
+
 </style>
 </head>
 <body>
@@ -50,11 +53,12 @@
 
 <script type="text/javascript">
    
-      var startLat = 40.7141484;
-      var startLong = -73.963915;
+      var startLat = 40.7344947;
+      var startLong = -73.9800241;
 
-      var endLat = 50.0597717;
-      var endLong = 14.1847568;
+      var endLat = 40.3740961;
+      var endLong = -73.998988;
+
 
 
     var uluru = {lat: startLat, lng: startLong};
@@ -134,6 +138,18 @@
 
 
         })
+
+
+
+        // color:
+        $('#map').on('shown', function () {
+          console.log("shift")
+        google.maps.event.trigger(map, 'resize');
+        map.setCenter(new google.maps.LatLng(42.3605336, -72.6362989));
+      })
+
+      }
+
     
 
 
