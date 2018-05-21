@@ -1,0 +1,173 @@
+body {
+    background:#F6582F;
+    height: 100%;
+    width: 100vw;
+    float:left;
+    
+
+}   
+
+.navigation {
+
+	padding:40px;
+	margin-right: 25px;
+	float:right;
+	font-family: 'Muli', sans-serif;
+	font-size: 50px;
+	color:white;
+}
+
+.navigation a:hover
+
+{	color:#2FF6B7;
+	background-color:white;
+	transition: all 0.5s ease;
+
+}
+
+
+.navigation a:visited {
+	color:#2FF6B7;
+}
+
+.intro {
+	float:left;
+	width:50vw;
+	font-family: 'Muli', sans-serif;
+	margin:25px;
+	font-size: 25px;
+	color:white;
+	line-height: 40px;
+}
+
+.intro a:link{
+	color:#2FF6B7;
+}
+
+
+.intro a:hover
+
+{	
+	background-color:white;
+	transition: all 0.5s ease;
+	
+
+
+}
+
+.intro a:visited {
+
+	color:pink;
+}
+
+
+
+div {
+
+	padding:25px;
+}
+
+div.pages 
+
+{
+
+	font-family: 'Muli', sans-serif;
+	color:white;
+	margin:25px;
+	font-size: 25px;
+
+}
+
+
+div.pages a:visited {
+
+	color:#2FF6B7;
+}
+
+
+div.pages a:hover
+
+{
+	background-color:white;
+	transition: all 0.5s ease;
+
+}
+
+
+
+
+div.gallery
+
+{	width:20vw;
+	margin:20px;
+	display: inline-block;
+}
+
+div.gallery img{
+	padding:25px;
+}
+
+div.gallery a:visted {
+
+	color:#2FF6B7;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+   
+
+
+.intro {
+	float:left;
+	width: 85vw;
+	font-family: 'Muli', sans-serif;
+	color:white;
+	margin:25px;
+	font-size: 50px;
+	line-height: 65px}
+
+}
+
+.intro a:link{
+	color:#2FF6B7;
+}
+
+.intro a:visited{
+
+	color:pink;
+
+
+}
+
+div.pages 
+
+{
+
+	font-family: 'Muli', sans-serif;
+	color:white;
+	margin:25px;
+	font-size: 50px;
+
+
+}
+
+div.gallery
+
+{	width:40vw;
+	margin:20px;
+	display: inline-block;
+}
+
+div.gallery img{
+	padding:25px;
+	width: 500px;
+	height: auto;
+}
+
+}
+
+
+
+
+
