@@ -56,23 +56,27 @@ body {
 	top:250px;
 	float:left;
 	display: inline-flex;
-	position: absolute
+	position: absolute;
+	color:white;
+	font-family: 'Muli', sans-serif;
+	margin-left: 25px;
+
 
 }
+
 
 .photos img {
 
 	width:45vw;
 	padding-left: 30px;
+	
 
 }
 
 
+.photos li {
 
-.photos ul {
-	list-style-type: none
-
-
+	list-style-type: none;
 }
 
 
