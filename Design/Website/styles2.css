@@ -14,15 +14,14 @@ body {
 	left:80vw;
 	font-family: 'Muli', sans-serif;
 	font-size: 50px;
-	color:white;
+	color:#2FF6B7;
 	position: fixed;
 }
 
 .navigation a:hover
 
 {
-	background-color: #00A974;
-	color:#2FF6B7;
+	color:pink;
 	transition: all 0.5s ease;
 
 }

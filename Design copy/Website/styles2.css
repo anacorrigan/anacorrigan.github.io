@@ -1,0 +1,107 @@
+body {
+    background: #F6582F;
+    height: 100%;
+    width: 100vw;
+    float:left;
+
+}   
+
+.navigation {
+
+	padding:40px;
+	margin-right: 25px;
+	float:right;
+	left:80vw;
+	font-family: 'Muli', sans-serif;
+	font-size: 50px;
+	color:#2FF6B7;
+	position: fixed;
+}
+
+.navigation a:hover
+
+{
+	color:pink;
+	transition: all 0.5s ease;
+
+}
+
+.navigation a:visited {
+
+	color:#2FF6B7;
+}
+
+
+
+.description {
+	top:200px;
+	left:60vw;
+	width:30vw;
+	position: relative;
+	float:right;
+	display: inline-block;
+	font-family: 'Muli', sans-serif;
+	font-size: 20px;
+	color:white;
+	position: fixed;
+
+
+}
+
+
+.photos
+
+{	width:20vw;
+	top:250px;
+	float:left;
+	display: inline-flex;
+	position: absolute;
+	color:white;
+	font-family: 'Muli', sans-serif;
+	margin-left: 25px;
+
+
+}
+
+
+.photos img {
+
+	width:45vw;
+	padding-left: 30px;
+	
+
+}
+
+
+.photos li {
+
+	list-style-type: none;
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+
+
+.description {
+	top:200px;
+	width:60vw;
+	position: relative;
+	float:right;
+	display: inline-block;
+	font-family: 'Muli', sans-serif;
+	font-size: 20px;
+	color:white;
+	position: fixed;
+
+
+}
+
+
+.photos img {
+
+	width: 45vw;
+	margin-left: 35px;
+}
+}
+

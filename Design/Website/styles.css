@@ -12,23 +12,29 @@ body {
 	padding:40px;
 	margin-right: 25px;
 	float:right;
+	left:80vw;
 	font-family: 'Muli', sans-serif;
 	font-size: 50px;
-	color:white;
+	color:#2FF6B7;
+	position: fixed;
 }
 
-.navigation a:hover
 
-{	color:#2FF6B7;
-	background-color:white;
+.navigation a:visited {
+
+	color:#2FF6B7;
+}
+
+
+.navigation a:hover {
+	
+	color:pink;
 	transition: all 0.5s ease;
 
 }
 
 
-.navigation a:visited {
-	color:#2FF6B7;
-}
+
 
 .intro {
 	float:left;
@@ -45,20 +51,21 @@ body {
 }
 
 
+.intro a:visited {
+
+	color:pink;
+}
+
 .intro a:hover
 
 {	
-	background-color:white;
+	color:pink;
 	transition: all 0.5s ease;
 	
 
 
 }
 
-.intro a:visited {
-
-	color:pink;
-}
 
 
 
@@ -129,16 +136,7 @@ div.gallery a:visted {
 
 }
 
-.intro a:link{
-	color:#2FF6B7;
-}
 
-.intro a:visited{
-
-	color:pink;
-
-
-}
 
 div.pages 
 
